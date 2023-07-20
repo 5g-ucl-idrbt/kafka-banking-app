@@ -1,0 +1,9 @@
+com/idrbt/controller/JsonMessageController.class
+com/idrbt/config/KafkaTopicConfig.class
+com/idrbt/SpringbootKafkaApplication.class
+com/idrbt/kafka/JsonKafkaProducer.class
+com/idrbt/kafka/KafkaConsumer.class
+com/idrbt/controller/MessageController.class
+com/idrbt/kafka/KafkaProducer.class
+com/idrbt/kafka/JsonKafkaConsumer.class
+com/idrbt/payload/User.class

@@ -27,5 +27,16 @@ How to run the application
 How to test the application
 --
 Open postman or use curl command to post the data to rest endpoint as a producer
-1. If you are using postman then use as like this :
-1.1 
+1. If you are using postman then use as like this
+1.1 Open postman and give the below data
+2. POST:    http://localhost:9001/api/v1/kafka/publish
+   and raw-- and next that option select JSON
+   ```
+   {
+    "source_account": "KKK9809",
+    "dest_account": "PPP0468",
+    "txn_account": 5555
+   }
+```
+3. Check the kafka consumer console and mysql database that this data is saved in DB
+

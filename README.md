@@ -4,6 +4,13 @@ Kafka producer & consumer microservice application
 --
 This project contains rest endpoint to post the json data as producer and consumer will consume the data and store it in Mysql database.
 
+Prerequisites
+--
+1) openjdk 17
+2) maven 3.8.8
+3) mysql
+4) postman (optional)
+
 Git clone the repo
 --
 ```
@@ -37,6 +44,19 @@ Open postman or use curl command to post the data to rest endpoint as a producer
     "dest_account": "PPP0468",
     "txn_account": 5555
    }
-```
+   
+   OR
+   Use curl command for CLI 
+   
+   curl --location 'http://localhost:9001/api/v1/kafka/publish' \
+   --header 'Content-Type: application/json' \
+   --data '{
+       "source_account": "KKK9809",
+       "dest_account": "PPP0468",
+       "txn_account": 5555
+   }'
+   ```
 3. Check the kafka consumer console and mysql database that this data is saved in DB
+
+
 

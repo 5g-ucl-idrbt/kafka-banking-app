@@ -2,7 +2,7 @@
 
 Kafka producer & consumer microservice application 
 --
-This project contains rest endpoint to post the json data as producer and consumer will consume the data and store it in Mysql database.
+This project contains consumer and producer for kafka, We have rest endpoint to post the json data as producer and consumer will consume the data and store it in Mysql database.
 
 Prerequisites
 --
@@ -48,7 +48,7 @@ sudo apt install mysql-server
 sudo systemctl start mysql.service
 ```
 
-Configuring mysql
+# Configuring mysql
 ```
 sudo mysql
 
@@ -92,14 +92,20 @@ $ bin/zookeeper-server-start.sh config/zookeeper.properties
 # Start the Kafka broker service
 $ bin/kafka-server-start.sh config/server.properties
 
-to 
+# To produce
 $ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
 This is my first event
 This is my second event
 
+# To consume
+In this project topic name is idrbt_json
+
 $ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 This is my first event
 This is my second event
+
+Refer link for better understanding.
+https://kafka.apache.org/quickstart
 
 How to run the application
 --
